@@ -9,3 +9,6 @@ tests/build/
 experiments/
 benchmarks-public/
 domains/aij23/validation/
+.eggs
+preprocess/BFGP.egg-info/
+build
