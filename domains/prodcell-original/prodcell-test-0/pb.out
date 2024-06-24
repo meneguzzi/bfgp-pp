@@ -1,0 +1,26 @@
+[INFO] Parsed domain. [0.000s]
+[INFO] Generalized Domain created. [0.000s]
+[INFO] Generalized Planning Problem created. [0.000s]
+[INFO] Program loaded: [0.000s]
+[INFO] Read program:
+0. for(ptr_block_0++,14)
+1. for(ptr_device_0++,13)
+2. for(ptr_device_1++,12)
+3. for(ptr_procunit_0++,5)
+4. process(ptr_block_0,ptr_procunit_0)
+5. endfor(ptr_procunit_0++,3)
+6. for(ptr_procunit_0++,11)
+7. consume(ptr_block_0,ptr_depbelt_0)
+8. move(ptr_block_0,ptr_device_1,ptr_device_0)
+9. move(ptr_block_0,ptr_device_0,ptr_procunit_0)
+10. move(ptr_block_0,ptr_procunit_0,ptr_device_1)
+11. endfor(ptr_procunit_0++,6)
+12. endfor(ptr_device_1++,2)
+13. endfor(ptr_device_0++,1)
+14. endfor(ptr_block_0++,0)
+15. end
+
+[INFO] Number of instances: 3
+[INFO] INVALID GENERAL PLAN :(
+[INFO] Total time: [0.005s]
+

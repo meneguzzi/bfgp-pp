@@ -1,0 +1,11 @@
+0. for(ptr_block_0++,9)
+1. for(ptr_procunit_0++,6)
+2. move(ptr_block_0,ptr_fedbelt_0,ptr_belt_0)
+3. move(ptr_block_0,ptr_belt_0,ptr_procunit_0)
+4. process(ptr_block_0,ptr_procunit_0)
+5. move(ptr_block_0,ptr_procunit_0,ptr_belt_0)
+6. endfor(ptr_procunit_0++,1)
+7. move(ptr_block_0,ptr_belt_0,ptr_depbelt_0)
+8. consume(ptr_block_0,ptr_depbelt_0)
+9. endfor(ptr_block_0++,0)
+10. end

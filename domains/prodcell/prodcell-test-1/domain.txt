@@ -1,0 +1,45 @@
+[DOMAIN]: prodcell
+
+[TYPES]:
+block:object
+device:object
+fedbelt:device
+depbelt:device
+belt:device
+procunit:device
+
+[FUNCTIONS]:
+over(?x0:block,?x1:device)
+connected(?x2:device,?x3:device)
+processed(?x4:block,?x5:procunit)
+empty(?x6:device)
+finished(?x7:block)
+
+[ACTIONS]:
+[ACTION]: process(?b:block,?p:procunit)
+[TYPE]: memory
+[PRECONDITIONS]:
+(over(?b,?p)=1)
+[EFFECTS]:
+(processed(?b,?p)=1)
+
+[ACTION]: consume(?b:block,?d:depbelt)
+[TYPE]: memory
+[PRECONDITIONS]:
+(over(?b,?d)=1)
+[EFFECTS]:
+(over(?b,?d)=0)
+(finished(?b)=1)
+(empty(?d)=1)
+
+[ACTION]: move(?b:block,?d1:device,?d2:device)
+[TYPE]: memory
+[PRECONDITIONS]:
+(over(?b,?d1)=1)
+(connected(?d1,?d2)=1)
+(empty(?d2)=1)
+[EFFECTS]:
+(over(?b,?d1)=0)
+(over(?b,?d2)=1)
+(empty(?d1)=1)
+(empty(?d2)=0)
